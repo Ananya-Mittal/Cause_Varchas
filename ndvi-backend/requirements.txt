@@ -1,0 +1,34 @@
+# ── Web framework ─────────────────────────────────────────────────────────────
+fastapi>=0.111
+uvicorn[standard]>=0.29
+
+# ── Auth ──────────────────────────────────────────────────────────────────────
+python-jose[cryptography]>=3.3
+passlib[bcrypt]>=1.7
+
+# ── Data validation ───────────────────────────────────────────────────────────
+pydantic>=2.0
+
+# ── Database ──────────────────────────────────────────────────────────────────
+sqlalchemy>=2.0
+
+# ── HTTP client ───────────────────────────────────────────────────────────────
+requests>=2.31
+httpx>=0.27           # async-friendly alternative (optional)
+
+# ── ML stack ─────────────────────────────────────────────────────────────────
+scikit-learn>=1.4
+pandas>=2.2
+numpy>=1.26
+joblib>=1.3
+
+# ── Satellite ─────────────────────────────────────────────────────────────────
+earthengine-api>=0.1.400
+
+# ── Config ────────────────────────────────────────────────────────────────────
+python-dotenv>=1.0
+
+# ── Run ───────────────────────────────────────────────────────────────────────
+# Training:  python -m ml.train_model
+# Server:    python -m uvicorn app:app --reload
+# Prod:      python -m uvicorn app:app --host 0.0.0.0 --port 5000
